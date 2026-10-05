@@ -43,18 +43,19 @@ public class Complex {
     public Complex addTo(Complex c){
         return new Complex(this.real+c.real,this.imaginary+c.imaginary);
     }
-    multiplyTo(Complex c){
-
+    public Complex multiplyTo(Complex c){
+        return new Complex(this.real*c.real,this.imaginary*c.imaginary);
     }
-    conjugate(){
 
+    public Complex conjugate(){
+        return new Complex(this.real,this.imaginary*-1);
     }
-    magnitude(){
-
+    public double magnitude(){
+        return Math.sqrt((real*real+ imaginary*imaginary));
     }
 
     @Override
     public String toString() {
-        return "Complex{" + "real=" + real + ", imaginary=" + imaginary + '}';
+        return real + " + " + imaginary + " i";
     }
 }
